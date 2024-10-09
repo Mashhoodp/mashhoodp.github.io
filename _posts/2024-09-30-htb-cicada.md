@@ -1,10 +1,12 @@
 ---
 title: HTB - Cicada
-author: mashhood
-date: 2024-09-30 12:12:00 +0530
 description: The Cicada is an Easy HTB season 6 machine involves exploiting a Windows Active Directory setup.
+author: mashhood
+date: 2024-09-30 12:12:00 +0800
+description: 
 categories: [Writeup]
 tags: [htb]
+media_subpath: '/assets/img/posts/30092024/'
 ---
 
 # HTB - Cicada
@@ -124,7 +126,7 @@ Using Michael Wrightson’s credentials, we perform an LDAP domain dump:
 
 From the domain dump, we discover **David Orelious’s password** in the description section of domain users:
 
-![Desktop View](/assets/img/posts/30092024/cicada-ldap.png)
+![Desktop View](/cicada-ldap.png)
 
 ```
 david.orelious:aRt$Lp#7t*VQ!3
