@@ -6,10 +6,10 @@ date: 2024-09-30 12:12:00 +0800
 description: 
 categories: [Writeup]
 tags: [htb]
-media_subpath: '/assets/img/posts/30092024/'
+media_subpath: '/assets/img/posts/20240930/'
 ---
 
-# HTB - Cicada
+![Desktop View](Cicada.webp){: width="600" height="488" }
 
 The Cicada is an Easy HTB season 6 machine involves exploiting a Windows Active Directory setup. By enumerating SMB shares, we gradually gain access to sensitive information. After finding passwords in shared files and an LDAP domain dump, we escalate privileges to gain full control of the system.
 
@@ -126,7 +126,7 @@ Using Michael Wrightson’s credentials, we perform an LDAP domain dump:
 
 From the domain dump, we discover **David Orelious’s password** in the description section of domain users:
 
-![Desktop View](/cicada-ldap.png)
+![Desktop View](/cicada-ldap.webp)
 
 ```
 david.orelious:aRt$Lp#7t*VQ!3
