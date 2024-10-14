@@ -39,7 +39,7 @@ sudo systemctl start tor
 
 ## Configure Tor
 
-Edit the Tor configuration file:
+Now edit the Tor configuration file:
 
 ```bash
 sudo nano /etc/tor/torrc
@@ -70,6 +70,12 @@ Your .onion address is now generated. You can find it by running:
 sudo cat /var/lib/tor/hidden_service/hostname
 ```
 
+You will have a domain name like below
+
+```
+qd4axpacwmfx7zg7abdssxrhmikrg66gsgamxd6vr4ms2fmdzvjqq2yd.onion
+```
+
 Make note of this address, as it's how users will access your hidden service.
 Enter this address to the tor browser and you will get the default webpage of nginx
 
@@ -77,7 +83,7 @@ Enter this address to the tor browser and you will get the default webpage of ng
 
 ## Customize Your Website
 
-You have two options to customize your website:
+You have two options to quickly customize your website:
 
 ### Edit the default index.html
 
