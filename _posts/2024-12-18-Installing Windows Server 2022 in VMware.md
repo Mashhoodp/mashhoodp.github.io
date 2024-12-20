@@ -5,7 +5,7 @@ author: mashhood
 date: 2024-12-18 10:32:00 +0800
 categories: [System Security]
 tags: [windows] [server]
-media_subpath: /assets/img/posts/20241218/
+media_subpath: '/assets/img/posts/20241218/'
 ---
 ## Installing Windows Server 2022 in VMware Workstation
 
