@@ -4,7 +4,7 @@ description: This guide will show you how to install and configure Windows Serve
 author: mashhood
 date: 2024-12-18 10:32:00 +0800
 categories: [System Security]
-tags: [windows] [server]
+tags: [windows]
 media_subpath: '/assets/img/posts/20241218/'
 ---
 ## Installing Windows Server 2022 in VMware Workstation

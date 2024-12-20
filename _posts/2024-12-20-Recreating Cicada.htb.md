@@ -4,7 +4,7 @@ description: Let’s set up a fully functional Active Directory domain called Ci
 author: mashhood
 date: 2024-12-20 11:32:00 +0800
 categories: [System Security]
-tags: [htb] [windows] [server]
+tags: [htb]
 media_subpath: '/assets/img/posts/20241220/'
 image:
   path: cicada_recreate.webp
