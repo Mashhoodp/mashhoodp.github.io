@@ -29,23 +29,23 @@ This guide will show you how to install and configure Windows Server 2022 for AD
 1. Open **VMware Workstation**.
 2. Click on **File** > **New Virtual Machine** or select **Create a New Virtual Machine** from the home screen.
 3. Choose **Typical (recommended)** and click **Next**.
-![Desktop View](windows_server(2).webp)
+![Desktop View](windows_server2.webp)
 ### Step 2: Select the Installer Disc Image
 
 1. Select **Installer disc image file (ISO)**.
 2. Browse to the location of your Windows Server 2022 ISO file and click **Next**.
-![Desktop View](windows_server(3).webp)
+![Desktop View](windows_server3.webp)
 ### Step 3: Name the Virtual Machine and Set the Location
 
 1. Provide a name for your virtual machine (e.g., "Windows Server 2022").
 2. Specify the location where the virtual machine files will be saved.
 3. Click **Next**.
-![Desktop View](windows_server(4).webp)
+![Desktop View](windows_server4.webp)
 ### Step 4: Allocate Disk Space
 
 1. Specify the maximum disk size (e.g., 15 GB or more based on your needs).
 2. Click **Next**.
-![Desktop View](windows_server(5).webp)
+![Desktop View](windows_server5.webp)
 ### Step 5: Customize Hardware (Optional)
 
 1. Uncheck **Power on this virtual Machine** and click **Finish**.
