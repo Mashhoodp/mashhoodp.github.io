@@ -12,7 +12,7 @@ image:
 ---
 ## Recreating Cicada.htb
 
-Let’s set up a fully functional Active Directory domain called Cicada.htb on Windows Server 2022! This guide will take you through every step of the process.. If you’re more into automating tasks, check out the PowerShell script at the end. Need help installing Windows Server? You’ll find everything you need in [Installing Windows Server](/posts/Installing-Windows-Server-2022-in-VMware).
+Let’s set up a fully functional Active Directory domain called Cicada.htb on Windows Server 2022! This guide will take you through every step of the process.. If you’re more into automating tasks, check out the PowerShell script at the end. Need help installing Windows Server? You’ll find everything you need in [Installing Windows Server](https://cyberhubs.live/posts/Installing-Windows-Server-2022-in-VMware).
 
 ---
 
@@ -20,9 +20,9 @@ Let’s set up a fully functional Active Directory domain called Cicada.htb on W
 
 Renaming the server with a meaningful name makes it easier to identify in your network, especially in larger or more complex environments.
 1. Open **Settings** and click on **View your PC Name**.
-![Desktop View](/cicada_recreate(1).webp)
+![Desktop View](cicada_recreate(1).webp)
 2. In the **View your PC Name**, click on **Rename your PC**. Change the Name to **PC-1** and click **Next**.
-![Desktop View](/cicada_recreate(2).webp)
+![Desktop View](cicada_recreate(2).webp)
 3. The PC will Restart and Your change will be applied.
 
 
@@ -31,10 +31,10 @@ Renaming the server with a meaningful name makes it easier to identify in your n
 ### 2. Install Active Directory Domain Services (AD DS)
 Active Directory Domain Services is the backbone of domain-based networks, enabling centralized management of users, computers, and resources.
 1. Open **Server Manager** and click on **Add roles and features**.
-![Desktop View](/cicada_recreate(3).webp)
+![Desktop View](cicada_recreate(3).webp)
 2. In the **Add Roles and Features Wizard**, select **Role-based or feature-based installation** and click **Next**.
 3. Check the **Active Directory Domain Services** role. When prompted to add features, click **Add Features**.
-![Desktop View](/cicada_recreate(4).webp)
+![Desktop View](cicada_recreate(4).webp)
 4. Click **Next** through the Features and AD DS pages, and then click **Install**.
 
 ---
@@ -42,15 +42,15 @@ Active Directory Domain Services is the backbone of domain-based networks, enabl
 ### 3. Promote the Server to a Domain Controller
 Promoting the server to a domain controller establishes it as the central authority for managing authentication and enforcing security policies.
 1. After installation, a notification will appear in Server Manager. Click **Promote this server to a domain controller**.
-![Desktop View](/cicada_recreate(5).webp)
+![Desktop View](cicada_recreate(5).webp)
 2. In the **Deployment Configuration** screen:
     - Select **Add a new forest**.
     - Enter the **Root domain name** as `cicada.htb` and click **Next**.
-![Desktop View](/cicada_recreate(6).webp)
+![Desktop View](cicada_recreate(6).webp)
 3. In the **Domain Controller Options** screen:
     - Ensure **Domain Name System (DNS)** and **Global Catalog (GC)** are selected.
     - Set the **Directory Services Restore Mode (DSRM)** password.
-![Desktop View](/cicada_recreate(7).webp)
+![Desktop View](cicada_recreate(7).webp)
 4. Continue through the wizard, verifying settings and prerequisites, and click **Install**.
 
 The server will restart automatically once the promotion is complete.
@@ -61,12 +61,12 @@ Installing Certificate Services provides the infrastructure for secure communica
 
 1. Open **Server Manager** and click **Add roles and features** again.
 2. In the **Add Roles and Features Wizard**, Check the **Active Directory Certificate Services** role. When prompted, click **Add Features**.
-![Desktop View](/cicada_recreate(8).webp)
+![Desktop View](cicada_recreate(8).webp)
 3. Continue through the wizard and click **Install**.
 4. After installation, click **Configure Active Directory Certificate Services** on the completion page.
-![Desktop View](/cicada_recreate(9).webp)
+![Desktop View](cicada_recreate(9).webp)
 5. In the **AD CS Configuration Wizard**, select the **Certification Authority** role, proceed through the wizard by clicking **Next**, and then click **Configure**.
-![Desktop View](/cicada_recreate(10).webp)
+![Desktop View](cicada_recreate(10).webp)
 The server is now set up as a Certificate Authority (CA).
 
 ---
@@ -75,16 +75,16 @@ The server is now set up as a Certificate Authority (CA).
 After the domain is set up, you can create users in **Active Directory Users and Computers (ADUC)**.
 
 1. Open **Active Directory Users and Computers** from the **Tools** menu in Server Manager.
-![Desktop View](/cicada_recreate(11).webp)
+![Desktop View](cicada_recreate(11).webp)
 2. Navigate to **cicada.htb > Users**, right-click, and select **New > User**.
-![Desktop View](/cicada_recreate(15).webp)
+![Desktop View](cicada_recreate(15).webp)
 3. Fill in the details for the first user:
     - **Full Name**: Michael Wrightson
     - **User logon name**: michael.wrightson
     - Set a password as `Cicada$M6Corpb*@Lp#nZp!8` and ensure **Password never expires** is checked.
     - Click **Finish**.
-![Desktop View](/cicada_recreate(16).webp)
-![Desktop View](/cicada_recreate(17).webp)
+![Desktop View](cicada_recreate(16).webp)
+![Desktop View](cicada_recreate(17).webp)
 Repeat this process for other users using the following details:
 
 | Name           | Logon Name     | Password           |
@@ -94,10 +94,10 @@ Repeat this process for other users using the following details:
 | John Smoulder  | john.smoulder  | `deROm67F7N^b)=VU` |
 | Sarah Dantelia | sarah.dantelia | `XAH1V98-b#F4A!Ux` |
 
-![Desktop View](/cicada_recreate(18).webp)
+![Desktop View](cicada_recreate(18).webp)
 
 4. After creating the users manually, double-click on David Orelious's account and add `Password is aRt$Lp#7t*VQ!3` to the description field.
-![Desktop View](/cicada_recreate(31).webp)
+![Desktop View](cicada_recreate(31).webp)
 
 ---
 
@@ -106,14 +106,14 @@ Repeat this process for other users using the following details:
 The **Guest** account is disabled by default. It provides temporary or anonymous access to domain resources. While it can be useful, leaving it enabled with default settings or excessive permissions makes it a prime target for attackers.
 Enable it and configure its permissions:
 1. Right-click the `Guest` account, select **Properties**, and check **Unlock the Account**.
-![Desktop View](/cicada_recreate(19).webp)
+![Desktop View](cicada_recreate(19).webp)
 2. Run the following PowerShell command to enable the account:
 
 ```powershell
 Enable-ADAccount -Identity Guest
 ```
 
-![Desktop View](/cicada_recreate(20).webp)
+![Desktop View](cicada_recreate(20).webp)
 
 ---
 
@@ -124,11 +124,11 @@ Assigning Emily Oscars to the **Backup Operators** group allows her to perform c
 To add a user to the **Backup Operators** group:
 
 1. Navigate to **cicada.htb > Users**, locate the **Backup Operators** group, and double-click it.
-![Desktop View](/cicada_recreate(21).webp)
+![Desktop View](cicada_recreate(21).webp)
 2. Click **Add**, enter `emily.oscars`, and click **OK**.
-![Desktop View](/cicada_recreate(22).webp)
+![Desktop View](cicada_recreate(22).webp)
 3. Repeat the process for the **Remote Management Users** group.
-![Desktop View](/cicada_recreate(23).webp)
+![Desktop View](cicada_recreate(23).webp)
 
 ---
 
@@ -141,17 +141,17 @@ To create file shares for different departments:
 1. Open **File Explorer** and create the following directories:
     - `C:\Shares\HR`
     - `C:\Shares\DEV`
-![Desktop View](/cicada_recreate(25).webp)
+![Desktop View](cicada_recreate(25).webp)
 2. Open **Server Manager**, go to **File and Storage Services**, and click **Shares**.
 3. Right-click and select **New Share**.
-![Desktop View](/cicada_recreate(26).webp)
+![Desktop View](cicada_recreate(26).webp)
 4. Select **SMB Share – Quick** and click **Next**.
 5. Choose the path (`C:\Shares\HR` for the HR share) and configure permissions as required.
-![Desktop View](/cicada_recreate(27).webp)
+![Desktop View](cicada_recreate(27).webp)
 6. Grant full access to `Everyone` for HR.
-![Desktop View](/cicada_recreate(29).webp)
+![Desktop View](cicada_recreate(29).webp)
 7. Repeat the process for the `DEV` share, granting access only to `david.orelious` and `emily.oscars`.
-![Desktop View](/cicada_recreate(30).webp)
+![Desktop View](cicada_recreate(30).webp)
 
 ---
 ### PowerShell Script
