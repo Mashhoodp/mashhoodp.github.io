@@ -7,13 +7,13 @@ categories: [System Security]
 tags: [windows]
 media_subpath: '/assets/img/posts/20241218/'
 ---
-## Installing Windows Server 2022 in VMware Workstation
 
 Active Directory (AD) is a key part of many IT infrastructures, making it a great focus for learning and testing vulnerabilities. By setting up Windows Server 2022 as a Domain Controller, you can create a safe lab environment to practice and explore AD security concepts.
 
 This guide will show you how to install and configure Windows Server 2022 for AD vulnerability testing, step by step. Let’s dive in!
 
 ---
+
 ### Prerequisites
 
 1. **VMware Workstation Pro/Player**: Ensure you have the latest version installed.
@@ -29,29 +29,49 @@ This guide will show you how to install and configure Windows Server 2022 for AD
 1. Open **VMware Workstation**.
 2. Click on **File** > **New Virtual Machine** or select **Create a New Virtual Machine** from the home screen.
 3. Choose **Typical (recommended)** and click **Next**.
+
 ![Desktop View](windows_server2.webp)
+
+---
+
 ### Step 2: Select the Installer Disc Image
 
 1. Select **Installer disc image file (ISO)**.
 2. Browse to the location of your Windows Server 2022 ISO file and click **Next**.
+
 ![Desktop View](windows_server3.webp)
+
+---
+
 ### Step 3: Name the Virtual Machine and Set the Location
 
 1. Provide a name for your virtual machine (e.g., "Windows Server 2022").
 2. Specify the location where the virtual machine files will be saved.
 3. Click **Next**.
+
 ![Desktop View](windows_server4.webp)
+
+---
+
 ### Step 4: Allocate Disk Space
 
 1. Specify the maximum disk size (e.g., 15 GB or more based on your needs).
 2. Click **Next**.
+
 ![Desktop View](windows_server5.webp)
+
+---
+
 ### Step 5: Customize Hardware (Optional)
 
 1. Uncheck **Power on this virtual Machine** and click **Finish**.
+
 ![Desktop View](windows_server(6).webp)
+
 2. Remove the Floppy from the **Virtual Machine Settings**:
+
 ![Desktop View](windows_server(7).webp)
+
 Click **Ok** after making adjustments.
 
 ---
@@ -70,27 +90,35 @@ Click **Ok** after making adjustments.
 1. Once the virtual machine powers on, the Windows Server 2022 setup will begin.
 2. Choose your preferred language, time format, and keyboard input method, then click **Next**.
 3. Click **Install Now**.
+
 ![Desktop View](windows_server(12).webp)
+
 2. Choose the virtual disk you created earlier and click **Next**.
+
 ![Desktop View](windows_server(13).webp)
+
 The installation process will start, and the virtual machine will restart several times.
 
 ---
 
-### Step 9: Finalize Setup
+### Step 8: Finalize Setup
 
 1. After installation, configure the following:
     - Create an administrator password.
     - Log in with the administrator account.
 ![Desktop View](windows_server(14).webp)
+
 ---
 
-### Step 10: Post-Installation Configuration
+### Step 9: Post-Installation Configuration
 
 1. **Install VMware Tools**:
     - Go to the **VM** menu and select **Install VMware Tools**.
+
 ![Desktop View](windows_server(17).webp)
+
     - Double click the VMware tools Follow the on-screen instructions to enhance performance and enable features like shared clipboard and drag-and-drop functionality.
+
 ![Desktop View](windows_server(18).webp)
 
 2. **Optional: Configure Network Settings**:
