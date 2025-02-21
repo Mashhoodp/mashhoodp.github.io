@@ -87,7 +87,7 @@ This prevents conflicts between Debian and Kali repositories.
 
 Now, grab the **Kali archive keyring**, which is needed for secure package installation:
 
-1. Visit: [Kali Archive Keyring](http://kali.download/kali/pool/main/k/kali-archive-keyring/)
+1. Visit: [Kali Archive Keyring](https://kali.download/kali/pool/main/k/kali-archive-keyring/)
 2. Copy the link for the latest `kali-archive-keyring_202X.1_all.deb` package.
 3. Download it:
 
