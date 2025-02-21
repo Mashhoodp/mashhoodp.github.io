@@ -35,7 +35,7 @@ If you're looking to set up Kali Linux on Google Cloud and access it remotely, y
 
 8. Under **Networking**, check **Allow HTTP traffic** (for web services) and enable **IP forwarding** (needed for advanced networking setups).
 
-![Desktop View](kali-gcp5 1.webp)
+![Desktop View](kali-gcp5.webp)
 
 9. Under **Observability**, enable **Display Device**. This is required for graphical applications like Chrome Remote Desktop.
 
