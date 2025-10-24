@@ -11,7 +11,7 @@ image:
   lqip: data:image/webp;base64,UklGRpoAAABXRUJQVlA4WAoAAAAQAAAADwAABwAAQUxQSDIAAAARL0AmbZurmr57yyIiqE8oiG0bejIYEQTgqiDA9vqnsUSI6H+oAERp2HZ65qP/VIAWAFZQOCBCAAAA8AEAnQEqEAAIAAVAfCWkAALp8sF8rgRgAP7o9FDvMCkMde9PK7euH5M1m6VWoDXf2FkP3BqV0ZYbO6NA/VFIAAAA
 ---
 
-Let’s set up a fully functional Active Directory domain called Cicada.htb on Windows Server 2022! This guide will take you through every step of the process.. If you’re more into automating tasks, check out the PowerShell script at the end. Need help installing Windows Server? You’ll find everything you need in [Installing Windows Server](https://cyberhubs.live/posts/Installing-Windows-Server-2022-in-VMware).
+Let’s set up a fully functional Active Directory domain called Cicada.htb on Windows Server 2022! This guide will take you through every step of the process.. If you’re more into automating tasks, check out the PowerShell script at the end. Need help installing Windows Server? You’ll find everything you need in [Installing Windows Server](https://netsec.live/posts/Installing-Windows-Server-2022-in-VMware).
 
 ---
 
