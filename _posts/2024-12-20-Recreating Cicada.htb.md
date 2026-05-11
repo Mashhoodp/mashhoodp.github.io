@@ -2,7 +2,7 @@
 title: Recreating Cicada.htb
 description: Let’s set up a fully functional Active Directory domain called Cicada.htb on Windows Server 2022!
 author: mashhood
-date: 2024-12-20 11:32:00 +0800
+date: 2024-12-20 11:33:00 +0800
 categories: [System Security]
 tags: [htb]
 media_subpath: '/assets/img/posts/20241220/'
