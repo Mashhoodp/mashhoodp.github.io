@@ -214,7 +214,7 @@ Install-ADDSForest `
 Import-Module ActiveDirectory
 
 $users = @(
-    @{Name="Michael Wrightson"; SamAccountName="michael.wrightson"; Password='Cicada$M6Corpb*@Lp#nZp!8'},
+    @{Name="Michael Wrightson"; SamAccountName="michael.wrightson"; Password='Cicada$M6Corpb*Lp#nZp!8'},
     @{Name="David Orelious"; SamAccountName="david.orelious"; Password='aRt$Lp#7t*VQ!3'},
     @{Name="Emily Oscars"; SamAccountName="emily.oscars"; Password="Q!3@Lp#M6b*7t*Vt"},
     @{Name="John Smoulder"; SamAccountName="john.smoulder"; Password="deROm67F7N^b)=VU"},
@@ -267,7 +267,7 @@ Dear new hire!
 
 Welcome to Cicada Corp! We're thrilled to have you join our team. As part of our security protocols, it's essential that you change your default password to something unique and secure.
 
-Your default password is: Cicada$M6Corpb*@Lp#nZp!8
+Your default password is: Cicada$M6Corpb*Lp#nZp!8
 
 To change your password:
 
