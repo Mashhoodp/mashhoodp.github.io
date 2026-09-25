@@ -229,7 +229,7 @@ foreach ($user in $users) {
     -AccountPassword (ConvertTo-SecureString $user.Password -AsPlainText -Force) `
     -Enabled $true `
     -PasswordNeverExpires $true `
-    -Description ($(if ($user.SamAccountName -eq "david.orelious") { "Password is aRt$Lp#7t*VQ!3" } else { "" }))
+    -Description ($(if ($user.SamAccountName -eq "david.orelious") { 'Password is aRt$Lp#7t*VQ!3' } else { "" }))
 }
 
 # Add Emily Oscars to Backup Operators and Remote Management Users
@@ -262,7 +262,7 @@ icacls "C:\Shares\DEV" /grant "cicada\david.orelious:(F)" "cicada\emily.oscars:(
 
 
 # Create HR Notice File
-@"
+@'
 Dear new hire!
 
 Welcome to Cicada Corp! We're thrilled to have you join our team. As part of our security protocols, it's essential that you change your default password to something unique and secure.
@@ -285,10 +285,10 @@ Thank you for your attention to this matter, and once again, welcome to the Cica
 
 Best regards,
 Cicada Corp
-"@ | Out-File -FilePath "C:\Shares\HR\Notice from HR.txt"
+'@ | Out-File -FilePath "C:\Shares\HR\Notice from HR.txt"
 
 # Create Backup Script
-@"
+@'
 $sourceDirectory = "C:\Shares"
 $destinationDirectory = "D:\Backup"
 
@@ -300,7 +300,7 @@ $backupFileName = "smb_backup_$dateStamp.zip"
 $backupFilePath = Join-Path -Path $destinationDirectory -ChildPath $backupFileName
 Compress-Archive -Path $sourceDirectory -DestinationPath $backupFilePath
 Write-Host "Backup completed successfully. Backup file saved to: $backupFilePath"
-"@ | Out-File -FilePath "C:\Shares\DEV\Backup_script.ps1"
+'@ | Out-File -FilePath "C:\Shares\DEV\Backup_script.ps1"
 
 
 # Unlock the Guest account
