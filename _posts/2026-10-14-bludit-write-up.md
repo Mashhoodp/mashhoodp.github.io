@@ -2,7 +2,7 @@
 title: Bludit.lab - Machine Writeup
 description: Bludit CMS 3.18.2 - Web Application Vulnerability Assessment, Chained Impact Analysis, and Privilege Escalation.
 author: Anil.M.Ravi
-date: 2024-09-30 12:12:00 +0800
+date: 2026-10-14 12:40:00 +0800
 categories: [System Security, Writeup]
 tags: [bludit, ctf, writeup, vulnerability]
 media_subpath: '/assets/img/posts/20261014/'
